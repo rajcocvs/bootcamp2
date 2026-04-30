@@ -30,7 +30,7 @@ stages:
         provider: 'azurerm'
         command: 'init'
         workingDirectory: $(WORKING_DIR)
-        environmentServiceNameAzureRM: $(SERVICE_CONNECTION)
+        backendServiceArm: $(SERVICE_CONNECTION)
 
 # ================= PLAN =================
 - stage: Plan
@@ -55,7 +55,7 @@ stages:
         provider: 'azurerm'
         command: 'plan'
         workingDirectory: $(WORKING_DIR)
-        environmentServiceNameAzureRM: $(SERVICE_CONNECTION)
+        backendServiceArm: $(SERVICE_CONNECTION)
 
 # ================= APPLY =================
 - stage: Apply
@@ -81,4 +81,4 @@ stages:
         provider: 'azurerm'
         command: 'apply'
         workingDirectory: $(WORKING_DIR)
-        environmentServiceNameAzureRM: $(SERVICE_CONNECTION)
+        backendServiceArm: $(SERVICE_CONNECTION)
