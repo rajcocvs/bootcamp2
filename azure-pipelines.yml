@@ -31,6 +31,10 @@ stages:
         command: 'init'
         workingDirectory: $(WORKING_DIR)
         backendServiceArm: $(SERVICE_CONNECTION)
+        backendAzureRmResourceGroupName: 'devbackendrg'
+        backendAzureRmStorageAccountName: 'devbackendstorage123'
+        backendAzureRmContainerName: 'myterrbackup'
+        backendAzureRmKey: 'dev.tfstate'
 
 # ================= PLAN =================
 - stage: Plan
